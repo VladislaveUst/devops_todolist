@@ -12,12 +12,12 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+CMD sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8080"
 
 EXPOSE 8080
 ]
 
 running settings:
-docker run -d --name todoapp -p 0.0.0.0:8080:8000 todoapp:1.0.0
+docker run -d --name todoapp -p 0.0.0.0:8080:8080 todoapp:1.0.0
 
 via a browser:  http://localhost:8080
